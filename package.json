@@ -2,6 +2,7 @@
   "name": "logic_practice",
   "version": "1.0.0",
   "description": "Repositorio para la prcatica de lógica",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +12,8 @@
     "url": "git@github-personal:Elizabeth145992/logic_practice.git"
   },
   "author": "Elizabeth Cruz",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
 }

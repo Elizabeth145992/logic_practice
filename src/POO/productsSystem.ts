@@ -85,14 +85,14 @@ const totalMoney = calculateTotal(products);
 console.log(`El total de dinero por todos los productos es: $${totalMoney.toFixed(2)}`);
 
 function findMostExpensiveProduct(products: Product[]): Product {
-    let expensiveProduct: Product = products[0];
+    let expensiveProduct: Product | undefined = products[0];
 
     for (const product of products) {
-        if(product.getPrice() > expensiveProduct.getPrice()) {
+        if(expensiveProduct && product.getPrice() > expensiveProduct.getPrice()) {
             expensiveProduct = product;
         }
     }
-    return expensiveProduct;
+    return expensiveProduct!;
 }
 
 function calculateTotal(products: Product[]): number {
