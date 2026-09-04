@@ -20,7 +20,7 @@ function countFrequency2(values: (number | string)[]): NumberFrequency {
 
     for (const value of values) {
         if (value in frequency) {
-            frequency[value]++;
+            frequency[value] = (frequency[value] || 0) + 1;
         } else {
             frequency[value] = 1;
         }
